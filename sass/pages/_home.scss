@@ -1,0 +1,112 @@
+.header-navmenu{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	
+	background-image: linear-gradient( to right bottom, 
+
+		rgba($bg-color-black, .9), rgba($bg-color-black,.9)),
+
+	    url(../assets/images/img/bg_tjb_header.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:top;
+
+	
+
+}
+
+.section-skills{
+	
+	background: $color-light-grey-1 url(../assets/images/img/tjb-photo.png) 110% 35% no-repeat;
+	font-size:1.6rem;
+	font-family:'avenir_next_regular';
+	height: 52.8rem;
+	
+
+	@include respond(tab-port){
+		padding:1.5rem;
+		height:auto;
+		font-size:1.4rem;
+	}
+
+
+	@include respond(phone){
+
+		background-image:none;
+
+	}
+	
+	
+
+}
+
+.section-whriteme{
+	height:50rem;
+	
+	background:$color-light-grey-1 url(../assets/images/img/bg-1.png) 0 0 no-repeat;
+	background-size: cover;
+	position: relative;
+	
+	
+
+}
+
+.section-enquire{
+	
+	background:$color-light-grey-1 url(../assets/images/img/restaurant_blackwood_bg.jpg) 0 0 no-repeat;
+	background-size: cover;
+	/*padding:3.2rem 0;*/
+	padding:15rem 0;
+
+	@include respond(phone){
+		padding:0;
+		// padding-top:0;
+		// padding-bottom:1.5rem;
+	}
+	
+
+}
+
+.contactme{
+
+	height: 50rem;
+	background-color: rgba($color-white, .15);
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-o-border-radius: 3px 3px 3px 3px;
+	-ms-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0 1.5rem 4rem rgba($bg-color-black, .15);
+	// border:1px solid green !important;
+	
+
+}
+
+/*.ourwork{
+	width: 100%;
+	box-shadow: 0 1.5rem 4rem rgba($bg-color-black, .15);
+}
+*/
+.section-ourwork{
+ 
+ 	padding:8rem 0;
+ 	text-align: center;
+ 	background-image: linear-gradient(to right bottom, $color-primary-light, $headline-primary-color);
+	transition: all .3s;
+	// border:1px solid green !important;
+	
+	h2{
+		color: $headline-secondary-color !important;
+	}
+}
+
+
+.section-aboutme{
+	
+	padding:6rem 0;
+	position:relative;
+	
+
+}
+               

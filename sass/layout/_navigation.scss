@@ -1,0 +1,265 @@
+.navigation{
+
+	position: relative;
+
+
+
+	&__checkbox{
+
+		display: none;
+
+
+	}
+
+	&__button{
+		background-color: $color-white;
+		height: 7rem;
+		width: 7rem;
+		position: fixed;
+		top:3.5rem;
+		right: 6rem;
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-o-border-radius: 50%;
+		-ms-border-radius: 50%;
+		z-index: 2000;
+
+		box-shadow: 0 1rem 3rem rgba($bg-color-black, .1);
+		cursor: pointer;
+
+		@include respond(phone){
+
+			top:1.5rem;
+			right: 3rem;
+		}
+
+	}
+	
+	&__background{
+		height: 6rem;
+		width: 6rem;
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-o-border-radius: 50%;
+		-ms-border-radius: 50%;
+		position: fixed;
+		top: 4.5rem;
+		right: 6.5rem;
+		background-image: radial-gradient($color-primary-light, $headline-primary-color );
+		z-index: 1000;
+		transition: transform .8s;
+		/*transform:scale(50);*/	
+
+
+
+		@include respond(phone){
+
+			top: 2.5rem;
+			right: 3.5rem;
+		}
+
+	}
+
+	&__nav{
+		height: 100vh;
+		width: 100%;
+		position: fixed;
+		top:0;
+		right:0;
+		z-index: 1000;
+
+
+		opacity:0;
+		width: 0;
+
+		transition:all .8s;
+
+	}
+
+	&__list{
+		position:absolute;
+		top:50%;
+		left: 50%;
+		-moz-transform:translate(-50%, -50%);
+		-webkit-transform:translate(-50%, -50%);
+		-o-transform:translate(-50%, -50%);
+		-ms-transform:translate(-50%, -50%);
+		transform:translate(-50%, -50%);
+
+		/*background-color: orangered;*/
+		
+		text-align: center;
+
+		@include respond(tab-port){
+
+			top:50%;
+			left:50%;
+			-webkit-transform:translate(-50%, -50%);
+			-moz-transform:translate(-50%, -50%);
+			-o-transform:translate(-50%, -50%);
+			-ms-transform:translate(-50%, -50%);
+			transform:translate(-50%, -50%);
+		}
+		
+	}
+
+	&__item{
+		margin:1em;
+	}
+
+	&__link{
+
+		position: relative;
+		display: block;
+		z-index: 2500;
+		font:4rem 'avenir_next_bold';
+		font-weight: 300;
+		color: $color-white;
+		text-transform: uppercase;
+
+
+		span{
+			
+			font:4rem 'avenir_next_regular';
+			font-weight: inherit;
+			margin:0 1.3rem;
+			float: left;
+		}
+
+		&::before{
+			position: absolute;
+			// height: 5.1rem;
+			width: 0;
+			content:'';
+			top:0;
+			left:0;
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			-o-transition: all .3s;
+			-ms-transition: all .3s;
+			transition: all .3s;
+
+
+			// border:1px solid orangered;
+
+
+		}
+
+
+		&:hover {
+
+			&::before{
+				height: 100%;
+				width: 100%;
+				background-color: rgba($color-white, .3);
+
+			}
+
+			color:$headline-primary-color;
+			border:1px solid #cdcdcd;
+			
+		}
+
+
+	}
+
+	&__checkbox:checked ~ &__background{
+		// transform:scale(90);
+		transform:scale(90);
+		-webkit-transform:scale(90);
+		-moz-transform:scale(90);
+		-o-transform:scale(90);
+		-ms-transform:scale(90);
+		
+		
+	}
+
+	&__checkbox:checked ~ &__nav{
+		opacity: 1;
+		width: 100%;
+	}
+
+
+	&__icon{
+
+		position: relative;
+		margin-top: 3.3rem;
+		margin-left:2rem;
+
+		&,
+		&::before,
+		&::after{
+
+			width:3rem;
+			height: 2px;
+			background-color: #333;
+			display: inline-block;
+		}
+		
+		&::before,
+		&::after{
+			content: "";
+			position: absolute;
+			left:0;
+			-webkit-transition:all .2s;
+			-moz-transition:all .2s;
+			-o-transition:all .2s;
+			-ms-transition:all .2s;
+			transition:all .2s;
+		}
+
+		&::before{
+			top:-.8rem;
+		}
+		&::after{
+			top:.8rem;
+		}
+
+
+	}
+
+
+	&__button:hover &__icon::before{
+		top:-1rem;
+	}
+
+	&__button:hover &__icon::after{
+		top:1rem;
+	}
+
+	&__checkbox:checked + &__button &__icon{
+		background-color: transparent;
+	}
+
+	&__checkbox:checked + &__button &__icon::before{
+		
+		top:0;
+		-webkit-transform:rotate(45deg);
+		-moz-transform:rotate(45deg);
+		-o-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+		transform:rotate(45deg);
+	}
+
+	&__checkbox:checked + &__button &__icon::after{
+		
+		top:0;
+		-webkit-transform:rotate(-45deg);
+		-moz-transform:rotate(-45deg);
+		-o-transform:rotate(-45deg);
+		-ms-transform:rotate(-45deg);
+		transform:rotate(-45deg);
+
+	}
+
+
+
+}
+
+
+.selected {
+
+	border-bottom:1px dotted $color-white;
+}

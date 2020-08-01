@@ -1,0 +1,221 @@
+.workbox{
+
+	
+	-webkit-border-radius:3px 3px 3px 3px;
+	-moz-border-radius:3px 3px 3px 3px;
+	-o-border-radius:3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0 1.5rem 4rem rgba($bg-color-black, .2);
+	height: 50rem;
+
+	background-image:linear-gradient(105deg,
+	                                 
+	                                rgba($color-white, .9) 0%,
+	                                rgba($color-white, .9) 50%,
+	                                transparent 50%) ,  
+	                                url(../assets/images/img/jardin.png);
+	background-size: 100%;
+
+	transition: all .3s;
+
+	@include respond(tab-port){
+		background-size:cover;
+	}
+
+	@include respond(phone){
+
+		background-image:linear-gradient(105deg,
+	                                 
+	                                rgba($color-white, .9) 0%,
+	                                rgba($color-white, .9) 70%,
+	                                transparent 70%) ,  
+	                                url(../assets/images/img/jardin.png);
+		background-size:cover;
+
+	}
+	
+	&__content{
+
+		width: 50%;
+		height: inherit;
+		position: relative;
+
+		
+		@include respond(phone){
+
+			width:70%;
+		}
+
+		
+
+
+	}
+
+
+	&__logo{
+			
+			width: 10rem;
+			height:auto;
+
+			@include respond(phone){
+				height:10rem;
+			}
+		}
+	
+	&__text{
+
+	
+		position: absolute;
+		left: 50%;
+		top:50%;
+		-webkit-transform:translate(-50%, -50%);
+		-moz-transform:translate(-50%, -50%);
+		-ms-transform:translate(-50%, -50%);
+		-o-transform:translate(-50%, -50%);
+		transform:translate(-50%, -50%);
+		width:90%;
+		
+	}
+
+	&__tagline{
+
+		color:$color-text;
+		font:1.2rem 'avenir_next_regular';
+
+		
+	}
+	
+
+	&__button{
+
+	
+		padding: 2.5rem 0;
+		
+	}
+
+	&__link{
+		&,
+		&:link,
+		&:visited{
+			font:$font-defaut3;
+			border:1px solid $headline-fourth;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: .2rem;
+			text-decoration: none;
+			padding: 1.2rem;
+			color:$headline-fourth;
+			-webkit-border-radius:25px 25px 25px 25px;
+			-moz-border-radius:25px 25px 25px 25px ;
+			-o-border-radius:25px 25px 25px 25px ;
+			-ms-border-radius:25px 25px 25px 25px ;
+			border-radius:25px 25px 25px 25px ;
+			transition:all .5s;
+
+			&:hover{
+				color:$headline-secondary-color;
+				background-color: $headline-fourth;
+			
+			}
+
+		}
+	}
+
+	&__featured{
+		
+		position:relative;	
+
+		// border:1px solid orangered;
+		
+		@include respond(phone){
+			width:80%;
+			margin:0 auto;
+
+
+		}
+	
+
+
+	}
+
+	&__featured--p1{
+
+		height:23rem;
+		background-image:url(../assets/images/img/other1.png);
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:top;
+		// border:1px solid orangered
+		
+
+		// @include respond(phone){
+
+		// 	&:not(:last-child){
+
+		// 		margin
+		// 	}
+		// }
+	}
+
+	&__featured--p2{
+
+		height:23rem;		
+		background-image:url(../assets/images/img/rachat-auto.png);
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:top;
+	}
+
+	&__featured--p3{
+
+		height:23rem;
+		background-image:url(../assets/images/img/kapgon.jpg);
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:top;
+	}
+
+
+
+	&__description{
+		
+		background-color:rgba($headline-secondary-color2, .9);
+		position:absolute;
+		top:0; 
+		left:0;
+		width: 97%;
+		height:96%;
+		@include centerVertiHori;
+		opacity:0;
+		-webkit-transition:all .3s;
+		-moz-transition:all .3s;
+		-o-transition:all .3s;
+		-ms-transition:all .3s;
+		transition:all .3s;
+		display:block;
+
+		&:hover{
+			opacity:1;
+		}
+
+	}
+
+
+
+	&__wrap{
+
+		@include centerVertiHori;
+		width:100%;
+
+	}
+
+	&__tagline-project{
+		
+		font:1.2rem 'avenir_next_regular';
+		color:$headline-secondary-color;
+		
+	}
+
+
+	
+}

@@ -1,0 +1,90 @@
+
+// annulation du floatement des élements de chaque row
+
+@mixin clearfix{
+	
+	&::after{
+		content:"";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin Centerpage{
+	position: absolute;
+	top:63%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+}
+
+
+@mixin centerVertiHori{
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+		
+}
+
+
+/*
+	create RWD manager clearly 
+
+	Breakpoint argument choices
+
+	-phone  -- 600px
+	-tab-port -- 900px
+	-tab-land -- 1200px
+	-big-desktop -- +1800px
+
+*/
+
+@mixin respond($breakpoint) {
+	
+	@if ( $breakpoint ==  phone ){
+		
+		@media only screen and  ( max-width: 37.5em ){  
+
+			@content
+		};
+	}
+	
+	@if ( $breakpoint == tab-port ){
+
+		@media only screen and ( max-width: 56.25em) { 
+			
+			@content
+		};
+	}
+
+	@if ( $breakpoint == tab-land ) {
+		
+		@media only screen and (max-width: 75em) { 
+
+			@content
+		};
+	}
+	
+	@if ( $breakpoint == big-desktop ) {
+			
+			@media only screen and (max-width: 112.5em) { 
+				
+				@content
+			};
+		}
+
+		
+
+
+}
+
+

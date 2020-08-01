@@ -1,0 +1,193 @@
+/*  Here we add reset base files */
+
+@charset 'utf-8';
+
+
+/* Reset file css */
+
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,p,blockquote,
+pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,
+samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ul,li,
+fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,embed,figure,figcaption,footer,header,
+hgroup,menu,nav,output,ruby,section,sumary,time,mark,audio,video {
+
+	margin:0;
+	padding:0;
+	border:0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; 
+}
+
+input{
+	margin:0;
+	padding: 0;
+	
+}
+
+
+/*  HTML5 display-role reset for older browser*/
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section{
+	display: block;
+}
+
+blockquote, q{
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content:none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* a hack IE6 ,because default size is larger in IE6 */
+
+/**html{ font-size: 1.1em ;}*/
+
+
+
+*{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+}
+
+@-ms-viewport{
+	width: device-width;
+		
+}
+
+@viewport{
+	width: device-width;
+	
+	
+}
+
+
+input[type="button"]{
+
+	display: inline-block;
+	margin-bottom:none;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+
+
+img,embed,object,video{
+	max-width: 100% ;
+}
+
+ul, ol, li {
+	list-style-type: none;
+}
+
+input, textearea {
+	outline: none;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	-webkit-font-smoothing:antialiased;
+	-mozkit-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	-ms-font-smoothing:antialiased;
+}
+
+
+
+img {
+	max-width: 100%;
+}
+
+
+
+
+textarea{
+	border:none !important;
+}
+
+a:link, a:hover, a:focus{
+	text-decoration: none;
+	list-style: none;
+
+}
+
+/* Here we tell what represent 1 rem  1rem = 10px 
+	we would have 
+
+	font-size : 10/16 *100 = 62.5%;
+*/ 
+
+html{
+
+	font-size: 62.5%; // 1rem =10px  10/16=0.625
+
+	/* Where we manage RWD */
+
+
+	@include respond(tab-land){ // 1rem= 9px
+		
+		font-size:56.25%;
+
+	}
+
+	@include respond(tab-port){ //1rem =8px
+
+		font-size: 50%;
+	}
+	
+
+	 
+
+	@include respond(phone){
+	
+		font-size:35%;
+		// it's default coding 
+		
+	} 
+
+
+
+	@include respond(big-desktop){ // 1rem =12px
+
+			font-size:75%;
+			// font-size:65%;
+	}
+
+	
+}
+
+
+body{
+
+	/*background-color:$-bg-color-black;
+	color:white;
+*/	/*font-family:'herrvon';*/
+
+	line-height:1.7; 
+
+	@include respond(tab-port){
+
+		padding:0;
+	}
+
+
+}
+
+

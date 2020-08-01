@@ -1,0 +1,135 @@
+.footer{
+	background-color: $Footer-color;
+
+	padding-top:8rem;
+	padding-bottom:2rem;
+	font:1.5rem 'avenir_next_bold';
+	/*font:1.5rem 'avenir_next_regular';*/
+
+	@include respond(phone){
+
+		padding:2rem ; 
+	}
+
+	.footer-box{
+		padding:0 1.2rem;		
+		
+	}
+
+	&__about{
+		
+
+
+	}
+
+	&__title{
+
+		text-align: left;
+		text-transform: uppercase;
+		color:$headline-secondary-color;
+		font-size: inherit;
+		font-family: inherit;
+		letter-spacing: .2rem; 
+
+		@include respond(phone){
+
+			h3{
+				margin-bottom:1rem;
+
+			}
+		}
+
+
+	}
+
+	&__description{
+
+		text-align: left;
+		font-size:1.2rem;
+		font-family:'avenir_next_regular';
+		color:$color-light-grey-1;
+		padding-bottom:1.8rem;
+
+		.fa{
+			font-size: 1.4rem;
+			margin-right: .2rem;
+		}
+
+		@include respond(phone){
+
+	
+			
+			padding:1rem 0;
+
+			
+		}
+	}
+	
+	&__list{
+		
+		@include respond(phone){
+
+			display:inline-block;
+		}
+	}
+
+	&__item{
+		font-size:1.2rem; 
+		font-family:'avenir_next_regular';
+		
+		line-height: 3rem;
+
+		@include respond(phone){
+
+			float:left;
+
+			&:not(:last-child){
+				margin-right:4rem;
+			}
+		}
+
+
+	}
+
+	&__link{
+		color:$color-light-grey-1;
+
+
+		&:hover{
+			color:#cdcdcd;
+		}
+	}
+
+
+	&__fancy{
+
+		margin:2rem 0  1rem 0;
+		border:0;
+		border: 0.27px solid $color-light-grey-1;
+		width: 100%;
+
+		@include respond(phone){
+			margin:.5rem 0 1rem 0;
+			width:94%;
+		}		
+	}
+
+	&__copyright{
+		/*background-color: rgba(255,255,255,.2);*/
+		font-size:1.1rem; 
+		font-family:'avenir_next_regular';
+		color:rgba(255,255,255,.4);
+		color:#d8d8d8;
+		@include respond(phone){
+			display:block;
+			width:94%;
+		}
+
+		em{
+			font-style: italic;
+
+		}
+
+	}
+
+}

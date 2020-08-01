@@ -1,0 +1,132 @@
+@charset 'utf-8';
+
+/* Load HerrvonMuellerhoff fonts*/
+@font-face{
+	font-family:herrvon;
+	src:url(./fonts_librairies/herr-von-muellerhoff/HerrVonMuellerhoff-Regular.otf);
+	font-weight: 400;
+}
+
+
+/* Load MONSERRAT fonts*/
+
+@font-face{
+	font-family:Montserrat_ultra_light;
+	src:url(./fonts_librairies/montserrat/Montserrat-UltraLight.otf);
+	font-weight: 400;
+}
+@font-face{
+	font-family:Montserrat_regular;
+	src:url(./fonts_librairies/montserrat/Montserrat-Regular.otf);
+	font-weight: 400;
+}
+@font-face{
+	font-family:Montserrat_light;
+	src:url(./fonts_librairies/montserrat/Montserrat-Light.otf);
+	font-weight: 400;
+}
+
+@font-face{
+	font-family:Montserrat_bold;
+	src:url(./fonts_librairies/montserrat/Montserrat-Bold.otf);
+	font-weight: 400;
+}
+
+
+/* Load SOURCE_SANS_PRO fonts*/
+
+
+@font-face{
+	font-family:soure_sans_pro_regular ;
+	src:url(./fonts_librairies/source_sans_pro/SourceSansPro-Regular.otf);
+	font-weight: 400;
+}
+@font-face{
+	font-family:soure_sans_pro_extralight ;
+	src:url(./fonts_librairies/source_sans_pro/SourceSansPro-ExtraLight.otf);
+	font-weight: 400;
+}
+
+@font-face{
+	font-family:soure_sans_pro_light ;
+	src:url(./fonts_librairies/source_sans_pro/SourceSansPro-Light.otf);
+	font-weight: 400;
+}
+
+@font-face{
+	font-family:soure_sans_pro_It ;
+	src:url(./fonts_librairies/source_sans_pro/SourceSansPro-It.otf);
+	font-weight: 400;
+}
+
+@font-face{
+	font-family:soure_sans_pro_Bold ;
+	src:url(./fonts_librairies/source_sans_pro/SourceSansPro-Bold.otf);
+	font-weight: 400;
+}
+
+
+/*
+
+	Load Open sans font 
+
+*/
+@font-face{
+	font-family:opensans;
+	src:url(./fonts_librairies/opensans/OpenSans-Bold.ttf);
+	font-weight: 400;
+}
+@font-face{
+	font-family:OpenSans-Light ;
+	src:url(opensans/OpenSans-Light.ttf);
+	
+	font-weight: 400;
+}
+
+@font-face{
+	font-family:OpenSans-Regular;
+	src:url(./fonts_librairies/opensans/OpenSans-Regular.otf);
+	font-weight: 400;
+}
+
+
+
+
+/* Load Avenir fonts */
+
+
+@font-face{
+	
+	font-family:avenir_next_bold;
+	src:url(./fonts_librairies/avenir/AvenirNextLTPro-Bold.otf);
+	font-weight: 400;
+}
+
+
+@font-face{
+
+	font-family:avenir_next_light;
+	src:url(./fonts_librairies/avenir/AvenirNextLTPro-It.otf);
+	font-weight: 400;
+}
+
+
+@font-face{
+
+	font-family:avenir_next_regular;
+	src:url(./fonts_librairies/avenir/AvenirNextLTPro-Regular.otf);
+	font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+/*  END  FONTS */
+
+
+

@@ -1,0 +1,116 @@
+
+.headline-secondary{
+	font:3.8rem 'avenir_next_bold';
+	color:$headline-secondary-color2;
+	text-transform: uppercase;
+
+	@include respond(tab-port){
+		font-size:3rem;
+	}
+
+	@include respond(phone){
+		font-size:2.5rem;
+	}
+
+}
+
+.headline-tertiary{
+	font:1.6rem 'avenir_next_bold';
+	color: $headline-secondary-color2;
+}
+
+.headline-fourth{
+	/*font:4rem "herrvon";*/
+	font:3rem "Montserrat_bold";
+	color:$headline-fourth;
+	text-transform: uppercase;
+
+}
+
+.headline-more{
+	font:$font-defaut2;
+	color:$headline-secondary-color;
+	// color:$headline-primary-color;
+	text-transform:uppercase;
+	text-align:center;
+	// background-color:$color-white;
+
+}
+
+.headline-project{
+	font:$font-defaut2-light;
+	color:$headline-secondary-color;
+	
+}
+
+
+.fancy-hr{
+
+	border:.3px solid $headline-secondary-color2 ;
+	margin:2rem 0;
+	/*width: 5%;*/
+
+}
+
+.skills__content{	
+
+	/*border:1px solid #000;*/
+	margin-top:2rem;
+
+
+	ul{
+		/*border:1px solid green;*/
+
+		li{
+			display: inline-block;
+			position: relative;
+			/*border:1px solid red;*/
+			margin-right: 1rem;
+
+
+			a{
+				font:1.6rem 'avenir_next_regular';
+				color:$headline-secondary-color2;
+				cursor:text;
+
+				 &::before{
+
+					content:'|';
+					position:absolute;
+					top:0%;
+					right:-10%;
+				}
+			}
+		}
+	}
+
+	&--paragraph{
+
+		color:$color-text;
+		
+	}
+
+	
+}
+.whiteme__title{
+	/*margin-top: 3rem;*/ 
+
+	@include Centerpage;
+
+	h3{
+		font:6.25rem "herrvon";
+		font-weight: 700 !important;
+		
+
+		text-align: center;
+		color:$headline-primary-color;
+
+
+
+
+	}
+
+
+
+
+}

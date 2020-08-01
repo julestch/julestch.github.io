@@ -1,0 +1,95 @@
+.btn{
+
+	&,
+	&:link,
+	&:visited{
+		text-decoration:none;
+		text-transform: uppercase;
+		padding:1.5rem 2rem;
+		/*font: 1.6rem 'avenir_next_bold';*/
+		font:$font-defaut;
+		cursor:pointer;
+		display: block;
+		background-color:$headline-primary-color;
+		border:none;
+		width: 90%;
+		border-radius: 10rem;
+		color:$color-white;
+		letter-spacing: .18rem;
+		font-weight: 700;
+		transition:all .2s;
+	}
+
+
+
+
+	
+	&:hover{
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem rgba($bg-color-black, .2);
+		/*color:$color-grey-dark-2;
+		background-color:$color-light-grey-1; 
+
+		.fa{
+			color:$headline-primary-color;
+		}
+		color:$headline-primary-color;*/
+	}
+
+	&:active{
+		outline: none;
+		transform: translateY(-1px);
+		box-shadow: 0 .5rem 1rem rgba($bg-color-black, .2);
+
+	}
+
+	&:-colored{
+
+	}
+
+
+}
+
+// Add some button style for workbox component
+
+
+.btn-text{
+
+	&:link,
+	&:visited{
+		
+		color:$headline-secondary-color;
+		display:inline-block;
+		font:1rem 'avenir_next_regular';
+		text-transform:uppercase;
+		text-decoration:none;
+		border-bottom:1px solid $headline-secondary-color;
+		padding:3px;
+		transition: all .3s;
+
+	}
+
+	&:hover{
+
+		background-color:$headline-secondary-color;
+		color:$headline-secondary-color2;
+		-webkit-transform:translateY(-2px);
+		-mz-transform:translateY(-2px);
+		-o-transform:translateY(-2px);
+		-ms-transform:translateY(-2px);
+		transform:translateY(-2px);
+		box-shadow: 0 1rem 2rem rgba($bg-color-black, .15);
+
+	}
+
+	&:active{
+		
+		-webkit-transform:translateY(0);
+		-mz-transform:translateY(0);
+		-o-transform:translateY(0);
+		-ms-transform:translateY(0);
+		transform:translateY(0);
+		box-shadow: 0 .5rem 1rem rgba($bg-color-black, .15);
+	}
+}
+
